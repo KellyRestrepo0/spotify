@@ -18,10 +18,10 @@ export function Menu() {
                                 <Link className="nav-link" to="/integrantes">Integrantes</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="#">Tienda</Link>
+                                <Link className="nav-link" to="/tienda">Tienda</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link ">Música</Link>
+                                <Link className="nav-link "to="/musica">Música</Link>
                             </li>
                         </ul>
                     </div>

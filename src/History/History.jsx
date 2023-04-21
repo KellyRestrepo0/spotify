@@ -2,9 +2,9 @@ import './History.css'
 export function History() {
     return (
         <>
-            <div className='container'>
+            <div className='container-history'>
                 <div className='row'>
-                    <div className='col-12 col-md-6'>
+                    <div className='col-12 col-md-4'>
                         <h2>Morat</h2>
                         <p>
                             Morat es una banda colombiana de pop latino formada originalmente en Bogotá en 2011. Se dieron a conocer en 2015 con su éxito Mi nuevo vicio. Sus integrantes son Juan Pablo Isaza Piñeros, Juan Pablo Villamil Cortés, Simón Vargas Morales y Martín Vargas Morales. Hasta finales de 2016 había formado parte de la banda Alejandro Posada Carrasco, pero decidió abandonar el grupo, por lo que fue sustituido por Martín Vargas ese mismo año
@@ -12,7 +12,7 @@ export function History() {
                         <img src='https://firebasestorage.googleapis.com/v0/b/musicoskvra.appspot.com/o/98.webp?alt=media&token=64faef25-fba9-4e28-aaea-1faaf31f1391' alt='foto' className='img fluid w-100' ></img>
 
                     </div>
-                    <div className='col-12 col-md-3'>
+                    <div className='col-12 col-md-4'>
                         <h2>Inicios</h2>
                         <p>
                             Los integrantes de Morat son colombianos y se conocen desde los 5 años de edad, ya que estudiaban juntos en el colegio Gimnasio La Montaña, de la ciudad de Bogotá, y algunos de ellos posteriormente en la Universidad de los Andes.
@@ -21,7 +21,7 @@ export function History() {
 
 
                     </div>
-                    <div className='col-12 col-md-3'>
+                    <div className='col-12 col-md-4'>
                         <h2>Origen del nombre</h2>
                         <img src='https://firebasestorage.googleapis.com/v0/b/musicoskvra.appspot.com/o/banner.jpg?alt=media&token=340f547d-18be-40a0-a87b-0544baa56414' alt='foto' className='img fluid w-100' ></img>
                         <p>
