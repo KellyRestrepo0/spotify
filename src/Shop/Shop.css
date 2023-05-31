@@ -1,0 +1,23 @@
+
+#fondo{
+    width: 100%;
+    height: 850px;
+    object-fit:none;
+    margin-bottom: 15px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    
+}
+
+
+.blancoYnegro{
+    filter: grayscale(1);
+}
+.zoom {
+    transition: transform .2s; 
+}
+ 
+.zoom:hover {
+    transform: scale(1.5); 
+}
