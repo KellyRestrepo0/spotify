@@ -1,10 +1,15 @@
 import { consultarCanciones } from '../services/servicioCanciones'
 import React,{ useState, useEffect } from 'react'
+import { generarToken } from '../services/metodoPost'
+import './Music.css'
+
+
 //import { Carga } from '../Hook/Carga'
 
 export function Music () {
   const [canciones, setCanciones] = useState(null)
   const [estacargando, setEstacargando] = useState(true)
+  const [setAccessToken] = useState(null)
   useEffect(function () {
     consultarCanciones().then(function (respuesta) {
       console.log(respuesta)
@@ -12,6 +17,15 @@ export function Music () {
       setEstacargando(false)
     })
   }, [])
+  useEffect(function(){
+    generarToken().then(function (result){
+      console.log(result)
+      setAccessToken(result.access_token)
+    })
+    
+  }, [])
+
+
 
   if (estacargando) {
     return (
@@ -26,7 +40,7 @@ export function Music () {
           canciones.map(function (cancion) {
             return (
               <div key={cancion.id}>
-              <div className='col w-50 h-25 p-3 mx-auto d-block'>
+              <div  className='col w-50 h-25 p-3 mx-auto d-block'>
               <div className='card shadow my-3 mx-1 py-4'>
             
                 <img src={cancion.album.images[0].url} alt='foto' className='img-fluid w-25 h-50 rounded-circle mx-auto d-block' />
