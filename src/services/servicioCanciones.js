@@ -1,7 +1,7 @@
 import { generarToken } from './metodoPost'
 export async function consultarCanciones () {
   // const IDARTISTA = '2fiiGUBgPsIKDCE0bTthnl'
-  const IDARTISTA = '4dpARuHxo51G3z768sgnrY'
+  const IDARTISTA = '6eUKZXaKkcviH0Ku9w2n3V'
   const URI = `https://api.spotify.com/v1/artists/${IDARTISTA}/top-tracks?market=co`
 
   const respuestaToken = await generarToken()

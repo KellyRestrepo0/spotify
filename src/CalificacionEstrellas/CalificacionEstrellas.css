@@ -1,0 +1,32 @@
+.calificacion-estrellas {
+    display: inline-block;
+    font-size: 24px;
+  }
+  
+  .estrella {
+    color: gold;
+  }
+  
+  .estrella-llena {
+    color: gold;
+  }
+  
+  .estrella-media {
+    color: gold;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .estrella-media:before {
+    content: '\2605';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: gold;
+  }
+  
+  .estrella-vacia {
+    color: lightgray;
+  }

@@ -1,14 +1,16 @@
 import { consultarCanciones } from '../services/servicioCanciones'
 import { useState, useEffect } from 'react'
 import { generarToken } from '../services/metodoPost'
+import { MdSecurity} from 'react-icons/md'
 import './Music.css'
+import CalificacionEstrellas from '../CalificacionEstrellas/CalificacionEstrellas';
 
-// import { Carga } from '../Hook/Carga'
 
 export function Music () {
   const [canciones, setCanciones] = useState(null)
   const [estacargando, setEstacargando] = useState(true)
   const [accessToken, setAccessToken] = useState(null)
+  
 
   useEffect(function () {
     consultarCanciones().then(function (respuesta) {
@@ -35,6 +37,7 @@ export function Music () {
       <>
         <section id='contenedor_music'>
           {canciones?.map(function (cancion) {
+            const valorCalificacion = cancion.popularity
             return (
               <div key={cancion.id}>
                 <div className='col w-50 h-25 p-3 mx-auto d-block'>
@@ -47,10 +50,12 @@ export function Music () {
 
                     <h3 className='text-center fw-bold'>{cancion.name}</h3>
                     <h3 className='text-center fw-bold'>
-                      {cancion.popularity}
+                    <CalificacionEstrellas valor={valorCalificacion} />
+                    
                     </h3>
+                  
                     <h4 className='text-center'>{cancion.album.name}</h4>
-                    <h4 className='text-center'>{cancion.duration_ms}</h4>
+                   {/*  <h4 className='text-center'>{cancion.duration_ms}</h4> */}
                     <audio
                       className='mx-auto d-block'
                       controls
